@@ -14,9 +14,9 @@ module "ec2-app-v1" {
   ec2-subnets-ids = ["${module.vpc.public-subnet-ids}"]
 
   #IN CASE OF LAUNCHING EC2 IN SPECIFIC SUBNETS OR PRIVATE SUBNETS, PLEASE UN-COMMENT BELOW"
-  #ec2-subnets-ids = ["${module.cloudgeeks-vpc.private-subnet-ids}"]
-  #ec2-subnets-ids = ["","","","","",""]
-  #user-data = "${file("./modules/ec2/httpd.sh")}"
+  ec2-subnets-ids = ["${module.cloudgeeks-vpc.private-subnet-ids}"]
+  ec2-subnets-ids = ["","","","","",""]
+  user-data = "${file("./modules/ec2/httpd.sh")}"
 
 
 }
